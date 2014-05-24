@@ -16,10 +16,10 @@
     <license>MIT</license>
 
     <js-module src="www/PushNotification.js" name="PushNotification">
-        <clobbers target="plugins.pushNotification" />
-    </js-module>
+          <clobbers target="plugins.pushNotification" />
+      </js-module>
 
-    <!-- android -->
+      <!-- android -->
     <platform name="android">
 
       <config-file>
