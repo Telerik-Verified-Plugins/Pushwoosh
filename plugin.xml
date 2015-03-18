@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.pushwoosh.plugins.pushwoosh"
-    version="3.2.1">
+    version="3.4.13">
 
     <name>Pushwoosh</name>
 
@@ -29,17 +29,16 @@
       <config-file target="AndroidManifest.xml" parent="/manifest">
         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
-        <!--library-->
-        <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+        <uses-permission android:name="android.permission.VIBRATE" />
 
         <!-- GCM connects to Google Services. -->
         <uses-permission android:name="android.permission.INTERNET"/>
 
-        <!-- GCM requires a Google account. -->
-        <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
-
         <!-- Keeps the processor from sleeping when a message is received. -->
         <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+        <!-- So the sounds from assets folder could work for notification sounds. -->
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
         <!--
          Creates a custom permission so only this app can receive its messages.
@@ -124,6 +123,7 @@
     <platform name="ios">
       <framework src="Security.framework" />
       <framework src="Storekit.framework" />
+      <framework src="CoreLocation.framework" />
       <config-file target="config.xml" parent="/*">
         <feature name="PushNotification">
           <param name="ios-package" value="PushNotification"/>

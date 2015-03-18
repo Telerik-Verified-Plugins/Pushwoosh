@@ -71,6 +71,10 @@ PushNotification.prototype.clearLocalNotification = function() {
 	exec(null, null, "PushNotification", "clearLocalNotification", []);
 };
 
+PushNotification.prototype.clearNotificationCenter = function() {
+	exec(null, null, "PushNotification", "clearNotificationCenter", []);
+};
+
 //advanced background task to track device position and not drain the battery
 //deprecated, use startLocationTracking and stopLocationTracking
 PushNotification.prototype.startGeoPushes = function(success, fail) {
@@ -123,10 +127,23 @@ PushNotification.prototype.setLightScreenOnNotification = function(on, success, 
 PushNotification.prototype.setEnableLED = function(on, success, fail) {
 	exec(success, fail, "PushNotification", "setEnableLED", [on]);
 };
-
+//set led color
+PushNotification.prototype.setColorLED = function(color, success, fail) {
+	exec(success, fail, "PushNotification", "setColorLED", [color]);
+};
 //{goal:'name', count:3} (count is optional)
 PushNotification.prototype.sendGoalAchieved = function(config, success, fail) {
 	exec(success, fail, "PushNotification", "sendGoalAchieved", config ? [config] : []);
+};
+
+//Android Only. Gets push history, returns array
+PushNotification.prototype.getPushHistory = function(success) {
+	exec(success, null, "PushNotification", "getPushHistory", []);
+};
+
+//Android Only. Clears push history
+PushNotification.prototype.clearPushHistory = function() {
+	exec(null, null, "PushNotification", "clearPushHistory", []);
 };
 
 //Android End----
