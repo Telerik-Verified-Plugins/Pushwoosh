@@ -124,6 +124,7 @@
       <framework src="Security.framework" />
       <framework src="Storekit.framework" />
       <framework src="CoreLocation.framework" />
+      <framework src="src/ios/Pushwoosh.framework" custom="true" />
       <config-file target="config.xml" parent="/*">
         <feature name="PushNotification">
           <param name="ios-package" value="PushNotification"/>
@@ -136,8 +137,6 @@
 
       <header-file src="src/ios/PushNotification.h" target-dir="ios"/>
       <source-file src="src/ios/PushNotification.m" target-dir="ios"/>
-      <header-file src="src/ios/Pushwoosh.framework/Versions/A/Headers/PushNotificationManager.h" target-dir="ios"/>
-      <source-file src="src/ios/Pushwoosh.framework/Versions/A/Pushwoosh" framework="true"/>
     </platform>
 
   <!-- wp8 -->
