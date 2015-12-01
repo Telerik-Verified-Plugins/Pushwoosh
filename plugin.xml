@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"
 		id="com.pushwoosh.plugins.pushwoosh"
-    version="3.6.16">
+    version="3.6.16.1">
 
 		<name>Pushwoosh</name>
 
@@ -136,6 +136,7 @@
 			<framework src="Security.framework" />
 			<framework src="Storekit.framework" />
 			<framework src="CoreLocation.framework" />
+			<framework src="src/ios/Pushwoosh.framework" custom="true" />
 			<framework src="libstdc++.dylib"/>
 			<framework src="libz.dylib"/>
 			<config-file target="config.xml" parent="/*">
@@ -150,8 +151,6 @@
 
 			<header-file src="src/ios/PushNotification.h" target-dir="ios"/>
 			<source-file src="src/ios/PushNotification.m" target-dir="ios"/>
-			<header-file src="src/ios/Pushwoosh.framework/Versions/A/Headers/PushNotificationManager.h" target-dir="ios"/>
-			<source-file src="src/ios/Pushwoosh.framework/Versions/A/Pushwoosh" framework="true"/>
 		</platform>
 
 	<!-- wp8 -->
