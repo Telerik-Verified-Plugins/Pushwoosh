@@ -128,6 +128,7 @@
 
 			<source-file src="src/android/lib/Pushwoosh.jar" target-dir="libs" />
 			<framework src="com.google.android.gms:play-services-gcm:+" />
+			<framework src="src/android/fix-playservices-applicationid-CB-10014.gradle" custom="true" type="gradleReference" />
 			<framework src="com.android.support:support-v4:+" />
 		</platform>
 
