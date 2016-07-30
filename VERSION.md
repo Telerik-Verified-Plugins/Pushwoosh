@@ -1,3 +1,24 @@
+Current version: 6.0.0
+=========================
+Unified registerDevice response
+Unified push-notificaion event data
+getRemoteNotificationStatus for Android
+clearLaunchNotificaion method
+Customizable preferences for foreground pushes and log level
+Call registerDevice error callback if notificaions are disabled on iOS
+Removed location tracking permissions
+Current version: 5.1.3
+=========================
+Publish: [Android] Pushwoosh SDK 4.3.3 update
+Current version: 5.1.2
+=========================
+Publish: gradle dependencies fixes
+Current version: 5.1.1
+=========================
+Publish: [iOS] stability fixes
+Current version: 5.1.0
+=========================
+Publish: getTags, setTags for windows platform
 Current version: 5.0.3
 =========================
 Publish: Minimum version requirements for play-services-* and support-v4 references
