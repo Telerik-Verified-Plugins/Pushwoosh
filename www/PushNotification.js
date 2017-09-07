@@ -207,7 +207,7 @@ PushNotification.prototype.getRemoteNotificationStatus = function(callback, erro
 };
 
 //Function: setApplicationIconBadgeNumber
-//[android, ios] Set the application icon badge number
+//[android, ios, wp8, windows] Set the application icon badge number
 //
 //Parameters:
 // "badgeNumber" - icon badge number
@@ -438,6 +438,14 @@ PushNotification.prototype.cancelAllLocalNotifications = function(callback) {
 };
 
 // Event spawned when a notification is received while the application is active
+PushNotification.prototype.pushReceivedCallback = function(notification) {
+	var ev = document.createEvent('HTMLEvents');
+	ev.notification = notification;
+	ev.initEvent('push-receive', true, true, arguments);
+	document.dispatchEvent(ev);
+};
+
+// Event spawned when a notification is opened while the application is active
 PushNotification.prototype.notificationCallback = function(notification) {
 	var ev = document.createEvent('HTMLEvents');
 	ev.notification = notification;
